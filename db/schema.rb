@@ -10,10 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_05_180150) do
+ActiveRecord::Schema.define(version: 2020_03_05_191456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.text "content"
+    t.bigint "survey_answer_id"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["survey_answer_id"], name: "index_answers_on_survey_answer_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.bigint "survey_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["survey_id"], name: "index_questions_on_survey_id"
+  end
+
+  create_table "survey_answers", force: :cascade do |t|
+    t.text "content"
+    t.bigint "survey_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["survey_id"], name: "index_survey_answers_on_survey_id"
+    t.index ["user_id"], name: "index_survey_answers_on_user_id"
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.string "title"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_surveys_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +63,10 @@ ActiveRecord::Schema.define(version: 2020_03_05_180150) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "survey_answers"
+  add_foreign_key "questions", "surveys"
+  add_foreign_key "survey_answers", "surveys"
+  add_foreign_key "survey_answers", "users"
+  add_foreign_key "surveys", "users"
 end
