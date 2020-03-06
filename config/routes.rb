@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :surveys, only: [:new, :create, :update, :index, :show] do
+    resources :survey_answers, only: [:create]
+    resources :questions, only: [:new, :create, :index, :show, :edit]
+  end
+
+  resources :questions, only: [] do
+    resources :answers, only: [:index]
+  end
 end
