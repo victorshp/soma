@@ -3,11 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 2.5rem;
   width:100%;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  position: fixed;
+  position: absolute;
   bottom: 0;
 }
 .footer-links {
@@ -27,4 +27,12 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+#page-container {
+  position:relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
 }
