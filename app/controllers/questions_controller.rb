@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only [:edit, :update]
+  before_action :set_question, only: [:edit, :update]
 
 
   def index
