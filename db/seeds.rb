@@ -12,9 +12,6 @@ Question.destroy_all
 Survey.destroy_all
 SurveyAnswer.destroy_all
 
-User.create()
-Answer.create()
-Question.create()
-Survey.create()
-SurveyAnswer.create()
-
+User.create(email: 'warren@socratesinc.com', password: 'password')
+User.create(email: 'gramsay@gmail.com', password: 'password')
+User.create(email: 'jchild@gmail.com', password: 'password')
