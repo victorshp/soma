@@ -1,2 +1,12 @@
-<h1>Survey#show</h1>
-<p>Find me in app/views/survey/show.html.erb</p>
+<div class="container w-50">
+  <div class="row">
+    <div class="col ">
+      <h1 class='m-3 form'><%= @survey.title %></h1>
+      <%= @questions.each do |question| %>
+        <%= survey.question.content %>
+      <%= end %>
+
+    </div>
+  </div>
+</div>
+
