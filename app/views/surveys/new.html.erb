@@ -1,2 +1,25 @@
-<h1>Survey#new</h1>
-<p>Find me in app/views/survey/new.html.erb</p>
+<div class="container w-75">
+  <div class="row">
+    <div class="col ">
+      <h1 class='m-3 form'>New Survey</h1>
+      <div class='m-3 form'>
+        <div class="bd-callout bd-callout-warning">
+          <%= simple_form_for [@survey] do |f| %>
+
+            <%= f.input :title, label: "Title"%>
+              <div id="questions">
+                <%= f.simple_fields_for :questions do |question| %>
+
+                  <%= render 'question_fields', f: question %>
+                  <div class="links">
+                    <%= link_to_add_association 'add question', f, :questions, class: "btn-login" %>
+                  </div>
+                <% end %>
+              </div>
+            <%= f.submit 'Submit Survey', class: 'btn-submit' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
