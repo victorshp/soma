@@ -7,12 +7,12 @@ class SurveysController < ApplicationController
 
   def new
     @survey = Survey.new
-    @question =   @survey.questions.build
+    @question = @survey.questions.build
 
   end
 
   def create
-    @survey = Survey.new
+    @survey = Survey.new(survey_params)
     @survey.user = current_user
 
     if @survey.save
@@ -23,6 +23,7 @@ class SurveysController < ApplicationController
   end
 
   def show
+    @questions = @survey.questions
   end
 
   def edit
@@ -40,7 +41,7 @@ class SurveysController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
-    def article_params
-      params.require(:survey).permit(:title, question_attributes: [:id, :content])
+    def survey_params
+      params.require(:survey).permit(:title, questions_attributes: [:id, :content])
     end
 end

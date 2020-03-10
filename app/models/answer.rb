@@ -1,5 +1,6 @@
 class Answer < ApplicationRecord
   belongs_to :survey_answer
   belongs_to :question
-  validades :content,  presence: true
+  belongs_to :answer
+  validates :content,  presence: true
 end
