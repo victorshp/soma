@@ -8,11 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :questions, only: [] do
-<<<<<<< Updated upstream
     resources :answers, only: [:new, :create]
-=======
-    resources :answers, only: [:new, :create, :edit]
->>>>>>> Stashed changes
   end
 
   get 'profile', to: 'profiles#show'
