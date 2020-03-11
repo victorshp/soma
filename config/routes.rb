@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :questions, only: [] do
     resources :answers, only: [:index]
   end
+
+  get 'profile', to: 'profiles#show'
 end
