@@ -12,20 +12,25 @@
                  <%= f.input :email,
                              required: true,
                              autofocus: true,
-                             placeholder: "email@email.com",
+                             placeholder: "Email",
+                             label: false,
                              input_html: { autocomplete: "email" }%>
                  <%= f.input :password,
                              required: true,
+                             placeholder: "Password",
+                             label: false,
                              hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                              input_html: { autocomplete: "new-password" } %>
                  <%= f.input :password_confirmation,
                              required: true,
+                             placeholder: "Confirm Password",
+                             label: false,
                              input_html: { autocomplete: "new-password" } %>
                  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
                </div>
 
                <div class="form-actions">
-                 <%= f.button :submit, "Sign up" , class:"btn-login" %>
+                 <%= f.button :submit, "Sign up" , class:"btn-login grey_btn" %>
                </div>
              <% end %>
 
