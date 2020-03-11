@@ -1,14 +1,27 @@
-      <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-
-
-      <div class="card-profile-user">
-        <img src="/assets/images/monocolor_davidzydd.jpg" />
-        <div class="card-profile-user-infos">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card-trip mt-5">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
           <div>
-            <h2>User Profile</h2>
+            <h2><%= @user.email %></h2>
             <p>Short description here!</p>
           </div>
-          <h2 class="card-profile-user-id">@hercules</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-profile-user-user avatar-bordered" />
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card-trip mt-5">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= @user.email %></h2>
+            <p>Short description here!</p>
+          </div>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
       </div>
+    </div>
+  </div>
+</div>

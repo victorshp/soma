@@ -6,23 +6,34 @@ class SurveysController < ApplicationController
   end
 
   def new
+<<<<<<< Updated upstream
     @survey = Survey.new
+    @question = @survey.questions.build
+=======
+    @survey = Survey.new()
     @question =   @survey.questions.build
+>>>>>>> Stashed changes
 
   end
 
   def create
-    @survey = Survey.new
+    @survey = Survey.new(survey_params)
     @survey.user = current_user
 
     if @survey.save
+
       redirect_to @survey
     else
-      reder :new
+      render :new
     end
   end
 
   def show
+<<<<<<< Updated upstream
+    @questions = @survey.questions
+=======
+    @answer = Answer.new()
+>>>>>>> Stashed changes
   end
 
   def edit
@@ -40,7 +51,7 @@ class SurveysController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
-    def article_params
-      params.require(:survey).permit(:title, question_attributes: [:id, :content])
+    def survey_params
+      params.require(:survey).permit(:title, questions_attributes: [:id, :content])
     end
 end

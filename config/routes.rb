@@ -3,12 +3,16 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :surveys, only: [:new, :create, :update, :index, :show] do
-    resources :survey_answers, only: [:create]
+    resources :survey_answers, only: [:new, :create]
     resources :questions, only: [:new, :create, :index, :show, :edit]
   end
 
   resources :questions, only: [] do
-    resources :answers, only: [:index]
+<<<<<<< Updated upstream
+    resources :answers, only: [:new, :create]
+=======
+    resources :answers, only: [:new, :create, :edit]
+>>>>>>> Stashed changes
   end
 
   get 'profile', to: 'profiles#show'
