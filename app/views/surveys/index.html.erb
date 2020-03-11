@@ -2,14 +2,9 @@
   <div class="row">
     <div class="col ">
       <h1 class='m-3 form'>Surveys</h1>
-      <% @questions.each do |survey| %>
-      <ul>
-        <li>
-
-          <%= survey.title %>
-
-        </li>
-      </ul>
+      <% @surveys.each do |survey| %>
+      <h1> <%= survey.title %> </h1>
+      <%= link_to 'Answer this survey', new_survey_survey_answer_path(survey) %>
       <% end %>
     </div>
   </div>

@@ -6,8 +6,13 @@ class SurveysController < ApplicationController
   end
 
   def new
+<<<<<<< Updated upstream
     @survey = Survey.new
     @question = @survey.questions.build
+=======
+    @survey = Survey.new()
+    @question =   @survey.questions.build
+>>>>>>> Stashed changes
 
   end
 
@@ -16,14 +21,19 @@ class SurveysController < ApplicationController
     @survey.user = current_user
 
     if @survey.save
+
       redirect_to @survey
     else
-      reder :new
+      render :new
     end
   end
 
   def show
+<<<<<<< Updated upstream
     @questions = @survey.questions
+=======
+    @answer = Answer.new()
+>>>>>>> Stashed changes
   end
 
   def edit
