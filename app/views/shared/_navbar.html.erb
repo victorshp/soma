@@ -29,8 +29,14 @@
       <%= image_tag "https://res.cloudinary.com/dauxxi1io/image/upload/v1583936213/more_options_bdm6xp.png" %>
     <% end %>
 
-    <%= link_to "/profile", class: "navbar-brand" do %>
-      <%= image_tag "https://res.cloudinary.com/dauxxi1io/image/upload/v1583936213/avatar_ge93np.png" %>
+    <% if current_user %>
+      <%= link_to "/profile", class: "navbar-brand" do %>
+        <%= image_tag "https://res.cloudinary.com/dauxxi1io/image/upload/v1583936213/avatar_ge93np.png" %>
+      <% end %>
+    <% else %>
+      <%= link_to "/users/sign_in", class: "navbar-brand" do %>
+        <%= image_tag "https://res.cloudinary.com/dauxxi1io/image/upload/v1583936213/avatar_ge93np.png" %>
+      <% end %>
     <% end %>
   </div>
 </div>
