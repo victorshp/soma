@@ -2,38 +2,43 @@
   document.querySelector('.nav_bar').remove()
 <% end %>
 
-
 <div class="container">
-  <div class="row">
-    <div class="col ">
-      <div class="card border-light my-5">
-        <div class="card-header text-center" style="background-color: #424874; color: white;"><h2>Login</h2></div>
-          <div class="card-body">
-
-            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-              <div class="form-inputs">
-                <%= f.input :email,
-                            required: false,
-                            autofocus: true,
-                            label: false,
-                            placeholder: 'Email',
-                            input_html: { autocomplete: "email" } %>
-                <%= f.input :password,
-                            required: false,
-                            label: false,
-                            placeholder: 'Password',
-                            input_html: { autocomplete: "current-password" } %>
-                <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-              </div>
-
-              <div class="form-actions">
-                <%= f.button :submit, "Log in", class:"btn-login grey_btn" %>
-              </div>
-            <% end %>
-
-            <%= render "devise/shared/links" %></%>
-        </div>
+  <div class="row justify-content-center margin-bg">
+    <div class="col-5 sign-in">
+      <div class="row justify-content-center">
+        <%= image_tag "https://res.cloudinary.com/dauxxi1io/image/upload/v1583527320/soma_logo_placeholder_vyxzdx.png", class: "logo-sign" %>    
       </div>
+
+      <div class="row justify-content-left">
+        <h1 class='mb-3' style="font-size: 2rem;margin-left: 6vh;">Sign in</h1>
+      </div>
+
+      <div class="row justify-content-center">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= f.input :email,
+                        required: false,
+                        autofocus: true,
+                        label: false,
+                        placeholder: 'Email',
+                        input_html: { autocomplete: "email", style: 'width: 30vw;'} %>
+            <%= f.input :password,
+                        required: false,
+                        label: false,
+                        placeholder: 'Password',
+                        input_html: { autocomplete: "current-password", style: 'width: 30vw;' } %>
+          </div>
+          
+          <div class="row justify-content-center">
+            <%= f.button :submit, "Login", class:"btn-green" %>
+          <% end %>
+          </div>
+        
+          <div class="mt-5 row justify-content-center" style='font-size: 0.8rem;'>
+            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+              <%= link_to "Forgot my password", new_password_path(resource_name) %><br />
+            <% end %>
+          </div>
+
     </div>
   </div>
 </div>
