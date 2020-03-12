@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="https://res.cloudinary.com/dauxxi1io/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1583852211/soma_logo_icon_azha4g.png">
+    <link rel="icon" href="https://res.cloudinary.com/dauxxi1io/image/upload/v1584023580/soma_logo_icon_mk3_j44ncd.png">
 
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -19,16 +19,18 @@
         <%= render 'shared/navbar' %>
         <%= yield %>
       </div>
-
-      <footer class="footer">
-        <div class="footer-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </footer>
+      
+      <% if current_user %>
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </footer>
+      <% end %>
     </div>
 
     <%= javascript_include_tag 'application' %>
