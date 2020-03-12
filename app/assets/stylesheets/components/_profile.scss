@@ -30,7 +30,7 @@
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
   .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     padding: 50px 5px 5px 25px !important;
     .name {
@@ -49,11 +49,25 @@
         font-weight: lighter;
       }
     }
+    .btn-gradient {
+      color: white;
+      padding: 8px 24px;
+      border-radius: 4px;
+      font-weight: bold;
+      background: linear-gradient(#167FFB, #0F60C4);
+      transition: background 0.3s ease;
+      border: 1px solid #0F60C4;
+    }
+
+    .btn-gradient:hover {
+      background: linear-gradient(#147EFF, #0F67DA);
+      color: white;
+    }
   }
 }
 
 .profile-strength {
-  padding: 15px 5px !important;
+  padding: 15px 20px 35px !important;
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -62,6 +76,7 @@
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
   .title {
+    padding: 0px 0px 20px 0px;
     font-weight: 400;
     letter-spacing: 1px;
     span {
@@ -72,7 +87,7 @@
 }
 
 .profile-numbers {
-  padding: 15px 5px !important;
+  padding: 15px 20px 20px !important;
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -119,7 +134,7 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-  padding: 5px 25px 5px 25px !important;
+  padding: 15px 25px 10px 25px !important;
   .resume {
     display: flex;
     justify-content: space-between;
@@ -130,6 +145,10 @@
   }
   .price {
     font-weight: 700;
+  }
+  .price_a {
+    font-weight: 700;
+    color: #71DB77;
   }
   .preferences {
     font-size: 10px;
