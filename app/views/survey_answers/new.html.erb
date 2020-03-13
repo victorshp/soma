@@ -1,0 +1,17 @@
+<div class="container w-25">
+  <div class="row">
+    <div class="col text-jutify">
+      <h1 class='m-3 form text-center'>
+        <%= @survey.title %>
+      </h1>
+      <% @survey.questions.each do |question| %>
+        <%= simple_form_for [question, Answer.new(survey_answer: @survey_answer)], remote: true do |fa| %>
+          <p><%= simple_format(question.content) %></p>
+          <%= fa.input :content, label: "Choose an option", as: :radio_buttons, collection: ['A', 'B', 'C', 'D']%>
+          <%= fa.submit 'Submit Survey', class: 'btn-submit'%>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
