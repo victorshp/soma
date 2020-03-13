@@ -5,7 +5,6 @@ class SurveyAnswersController < ApplicationController
     # @answers = SurveyAnswer.where(survey_id: @surveys.id)
     @questions = Question.where(survey_id: @survey)
     @answers =  Answer.where(question_id: @questions.ids)
-
   end
 
   def new

@@ -4,29 +4,19 @@
       <h1 class='m-3 form', style="color:#424874;">Survey Results</h1>
       <% @questions.each do |question| %>
         <%= simple_format(question.content)  %>
-        <% question.answers.each do |answer| %>
-          <% a = 0 %>
-          <% b = 0 %>
-          <% c = 0 %>
-          <% d = 0 %>
-          <% answer.content %>
-          <% if answer.content == "A" %>
-            <% @a =+ 1 %>
-          <% elsif answer.content == "B" %>
-            <% @b =+ 1 %>
-          <% elsif answer.content == "C" %>
-            <% @c =+ 1 %>
-          <% elsif answer.content == "D" %>
-            <% @d =+ 1 %>
-          <% end %>
-        <% end %>
+        <% grouped_answers = question.answers.group_by(&:content) %>
+        <% a = grouped_answers["A"]&.count %>
+        <% b = grouped_answers["B"]&.count %>
+        <% c = grouped_answers["C"]&.count %>
+        <% d = grouped_answers["D"]&.count %>
         <div>
-          <div class="card-category bg-primary" style="height: 25px; margin-top: 15px; width: <%= @a.to_i*60+100%>px"><%= "A = #{@a.to_i}" %></div>
-          <div class="card-category bg-primary" style="height: 25px; margin-top: 15px; width: <%= @b.to_i*60+100%>px"><%= "B = #{@b.to_i}" %></div>
-          <div class="card-category bg-primary" style="height: 25px; margin-top: 15px; width: <%= @c.to_i*60+100%>px"> <%= "C = #{@c.to_i}" %></div>
-          <div class="card-category bg-primary" style="height: 25px; margin-top: 15px; width: <%= @d.to_i*60+100%>px"><%= "D = #{@d.to_i}" %></div>
+          <div class="card-category bg-primary" style="height: 25px; margin-top: 8px; width: <%= a.to_i*20+100%>px"><%= "A - #{a.to_i}" %></div>
+          <div class="card-category bg-primary" style="height: 25px; margin-top: 8px; width: <%= b.to_i*20+100%>px"><%= "B - #{b.to_i}" %></div>
+          <div class="card-category bg-primary" style="height: 25px; margin-top: 8px; width: <%= c.to_i*20+100%>px"> <%= "C - #{c.to_i}" %></div>
+          <div class="card-category bg-primary" style="height: 25px; margin-top: 8px; margin-bottom: 30px; width: <%= d.to_i*20+100%>px"><%= "D - #{d.to_i}" %></div>
         </div>
       <% end %>
+      <div class="mb-5"></div>
     </div>
   </div>
 </div>
