@@ -6,7 +6,7 @@
         <div class="bd-callout bd-callout-warning">
           <%= simple_form_for [@survey] do |f| %>
 
-            <%= f.input :title, label: "Title"%>
+            <%= f.input :title, label: "Title", placeholder: "The Hitchhiker's Guide to the Galaxy survey" %>
               <div id="questions">
                 <%= f.simple_fields_for :questions do |question| %>
 

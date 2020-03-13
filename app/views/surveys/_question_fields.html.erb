@@ -1,4 +1,9 @@
 <div class="nested-fields">
-  <%= f.input :content, as: :text, :input_html => { :rows => 5 } %>
+  <%= f.input :content, as: :text, label: "Type your question", placeholder: "Type your question with 4 options, A to D:
+  What is the meaning of life and the universe and everything?
+  A) 42
+  B) 42
+  C) 42
+  D) 42" ,:input_html => { :rows => 6 } %>
   <%= link_to_remove_association '<i class="far fa-trash-alt" id="trash"></i>'.html_safe, f %>
 </div>

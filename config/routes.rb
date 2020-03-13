@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :surveys, only: [:new, :create, :update, :index, :show] do
-    resources :survey_answers, only: [:new, :create]
+    resources :survey_answers, only: [:index, :new, :create]
     resources :questions, only: [:new, :create, :index, :show, :edit]
   end
 
