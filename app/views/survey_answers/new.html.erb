@@ -1,19 +1,19 @@
-<div class="container w-25">
+<div class="container">
   <div class="row">
-    <div class="col text-jutify">
-      <h1 class='m-3 form text-center'>
+    <div class="col-6 offset-3 col-lg-4 offset-lg-4 text-jutify">
+      <h1 class='m-3 form text-center border-bottom'>
         <%= @survey.title %>
       </h1>
-      <% @survey.questions.each do |question| %>
-        <%= simple_form_for [question, Answer.new(survey_answer: @survey_answer)], remote: true do |fa| %>
-          <p><%= simple_format(question.content) %></p>
-          <div id="submit-answer-<%= question.id %>">
-            <%= fa.input :content, label: "Choose an option", as: :radio_buttons, collection: ['A', 'B', 'C', 'D']%>
-            <%= fa.submit 'Submit Survey', class: 'btn-submit'%>
-          </div>
+        <%= simple_form_for [@survey.questions.first, Answer.new(survey_answer: @survey_answer)] do |f| %>
+          <% @survey.questions.each do |question| %>
+              <p><%= simple_format(question.content) %></p>
+              <div id="submit-answer-<%= question.id %>">
+                <%= f.input :content, label: "Choose an option", as: :radio_buttons, collection: ['A', 'B', 'C', 'D'], input_html: { name: "answer[#{question.id}]" } %>
+                <hr>
+            </div>
+          <% end %>
+          <%= f.submit 'Submit Answer', class: 'btn-submit'%>
         <% end %>
-      <% end %>
-
     </div>
   </div>
 </div>

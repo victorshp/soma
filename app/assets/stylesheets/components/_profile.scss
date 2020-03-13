@@ -1,6 +1,6 @@
 .profile-container {
   padding: 30px 40px;
-  background-color: lightgray;
+  background-color: #F4F4F4;
   height: 100%;
   display: flex;
 }
@@ -148,11 +148,11 @@
   }
   .price_a {
     font-weight: 700;
-    color: #71DB77;
+    color: #1DDD88;
   }
   .preferences {
     font-size: 10px;
-    color: lightgray;
+    color: #F4F4F4;
   }
 }
 
@@ -165,6 +165,17 @@
   overflow: hidden;
   margin-top: 30px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-  padding: 5px 25px 5px 25px !important;
+  padding: 25px 25px 25px 25px !important;
+  align-content: center;
+
 }
 
+.graphic {
+  height: 150px;
+  width: 100%;
+}
+
+.graphic img {
+  width: 100%;
+  height: 230px;
+}

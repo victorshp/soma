@@ -9,10 +9,10 @@
           <h4 class="name"> Hercules Brito </h4>
           <div class="user-description">
             <p class="address">São Paulo, SP</p>
-            <p class="searches">+ de 500 pesquissas respondidas</p>
+            <p class="searcphes">+ de 500 pesquisas respondidas</p>
           </div>
         </div>
-        <%= link_to "Send message", "#", class: "btn btn-gradient" %>
+        <%= link_to "Answer a Survey", "/surveys", class: "btn btn-check btn-lg" %>
       </div>
     </div>
 
@@ -40,16 +40,22 @@
         </div>
         <div class="resume">
           <p>Next Entry</p>
-          <p class="price_a">R$2,50</p>
+          <p class="price_a">R$0,00</p>
         </div>
         <div class="resume">
           <p>Last Withdrawal</p>
-          <p class="price_a">R$2,50</p>
+          <p class="price_a">R$30,50</p>
         </div>
       </div>
       <p class="preferences">Manage my Wallet Preferences</p>
     </div>
     <div class="connections">
+      <div class="graphic">
+        <img src="https://res.cloudinary.com/dauxxi1io/image/upload/v1584130422/Grafico_Som_ayuoye.png" alt="" class= "mb-4">
+      <div>
+        <%= link_to "Check your results", "/surveys/30/survey_answers", class: "btn btn-check btn-sm" %>
+      </div>
+      </div>
     </div>
   </div>
 </div>
