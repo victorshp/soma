@@ -1,0 +1,170 @@
+.profile-container {
+  padding: 30px 40px;
+  background-color: lightgray;
+  height: 100%;
+  display: flex;
+}
+
+.profile-left {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left:30px;
+}
+
+//// PROFILE LEFT COMPONENTS
+
+.profile-summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 5px 5px 25px !important;
+    .name {
+      font-weight: lighter;
+      letter-spacing: 1px;
+    }
+    .user-description {
+      display: flex;
+      .searches {
+        font-size: 15px;
+        color: rgb(66, 72, 116);
+        margin-left: 10px;
+      }
+      .address {
+        font-size: 15px;
+        font-weight: lighter;
+      }
+    }
+    .btn-gradient {
+      color: white;
+      padding: 8px 24px;
+      border-radius: 4px;
+      font-weight: bold;
+      background: linear-gradient(#167FFB, #0F60C4);
+      transition: background 0.3s ease;
+      border: 1px solid #0F60C4;
+    }
+
+    .btn-gradient:hover {
+      background: linear-gradient(#147EFF, #0F67DA);
+      color: white;
+    }
+  }
+}
+
+.profile-strength {
+  padding: 15px 20px 35px !important;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  .title {
+    padding: 0px 0px 20px 0px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    span {
+      font-weight: 700;
+    }
+  }
+
+}
+
+.profile-numbers {
+  padding: 15px 20px 20px !important;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  .title {
+    font-weight: 400;
+    letter-spacing: 1px;
+    span {
+      font-weight: 700;
+    }
+  }
+
+}
+
+.banner-header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(66, 72, 116, 1), rgba(66, 72, 116, 0.1)),image-url('21474327.jpg');
+  background-size: 400px;
+  background-position: right;
+  min-height: 160px;
+  height: 20vh;
+  position: relative;
+  img.avatar-large {
+    position: absolute;
+    width: 100px;
+    margin-right: 20px;
+    top: 107px;
+    left: 30px;
+    border: 2px solid white;
+  }
+}
+
+
+/// PROFILE RIGHT COMPONENTS
+
+.wallet-summary {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  padding: 15px 25px 10px 25px !important;
+  .resume {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .price {
+    font-weight: 700;
+  }
+  .price_a {
+    font-weight: 700;
+    color: #71DB77;
+  }
+  .preferences {
+    font-size: 10px;
+    color: lightgray;
+  }
+}
+
+.connections {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  padding: 5px 25px 5px 25px !important;
+}
+
