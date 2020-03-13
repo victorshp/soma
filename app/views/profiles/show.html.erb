@@ -1,22 +1,55 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-9">
-      <div class="card-trip mt-5 shadow-lg p-3 mb-5 bg-white rounded">
-
-
+<div class="profile-container">
+  <div class="profile-left">
+    <div class="profile-summary">
+      <div class="banner-header">
+        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+      </div>
+      <div class="container">
+        <div class="info">
+          <h4 class="name"> Hercules Brito </h4>
+          <div class="user-description">
+            <p class="address">São Paulo, SP</p>
+            <p class="searches">+ de 500 pesquissas respondidas</p>
+          </div>
+        </div>
+        <%= link_to "Send message", "#", class: "btn btn-gradient" %>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="card-trip mt-5 shadow-lg p-3 mb-5 bg-white rounded">
-      <img src="https://res.cloudinary.com/dauxxi1io/image/upload/v1583953718/avatar_cqj9if.jpg" alt="" class="rounded-circle">
-      </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card-trip mt-5 shadow-lg p-3 mb-5 bg-white rounded">
 
+    <div class="profile-strength">
+      <h4 class="title">Profile Strength: <span>Advanced</span></h4>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
+    </div>
+
+    <div class="profile-numbers">
+      <h4 class="title">My numbers</h4>
+      <hr>
+      numbers
+    </div>
+  </div>
+
+  <div class="profile-right">
+    <div class="wallet-summary">
+      <h4 class="title">Wallet Summary</h4>
+      <div class="entries">
+        <div class="resume">
+          <p>Current Balance</p>
+          <p class="price">R$2,50</p>
+        </div>
+        <div class="resume">
+          <p>Next Entry</p>
+          <p class="price_a">R$2,50</p>
+        </div>
+        <div class="resume">
+          <p>Last Withdrawal</p>
+          <p class="price_a">R$2,50</p>
+        </div>
+      </div>
+      <p class="preferences">Manage my Wallet Preferences</p>
+    </div>
+    <div class="connections">
     </div>
   </div>
 </div>
-
