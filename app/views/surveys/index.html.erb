@@ -1,16 +1,17 @@
 <div class="container w-50">
   <div class="row">
     <div class="col ">
-      <h1 class='m-3 form text-center'>Surveys</h1>
+      <h1 class='m-3 form text-center border-bottom'>Surveys</h1>
       <div class="cards">
       <% @surveys.each do |survey| %>
         <%= link_to new_survey_survey_answer_path(survey) do  %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://res.cloudinary.com/dauxxi1io/image/upload/v1584016797/survey_snane1.jpg)">
+          <div class="card-category justify-content-center align-items-center" style=" padding-right: 10px; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://res.cloudinary.com/dauxxi1io/image/upload/v1584016797/survey_snane1.jpg)">
             <%= survey.title %>
           </div>
         <% end %>
       <% end %>
     </div>
+    <hr>
   </div>
 </div>
 <div class="mt-5"></div>

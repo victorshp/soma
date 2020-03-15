@@ -1,6 +1,6 @@
 .btn-home {
-  border: 0px solid #004B84;
-  background: green;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   border-radius: 5px;
   font-size: 24px;
   vertical-align: middle;
@@ -19,8 +19,8 @@ a:hover {
 }
 
 .btn-login {
-  border: 0px solid #004B84;
-  background: #424874;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   padding: 3px 21px;
   border-radius: 5px;
   font-size: 24px;
@@ -36,8 +36,8 @@ a:hover {
 }
 
 .btn-sign-up {
-  border: 0px solid #004B84;
-  background: #424874;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   padding: 3px 21px;
   border-radius: 5px;
   font-size: 24px;
@@ -53,8 +53,8 @@ a:hover {
 }
 
 .btn-forgot-pass {
-  border: 0px solid #004B84;
-  background: #424874;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   padding: 3px 21px;
   border-radius: 5px;
   font-size: 24px;
@@ -69,8 +69,8 @@ a:hover {
 }
 
 .btn-submit {
-  border: 0px solid #004B84;
-  background: #424874;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   padding: 3px 21px;
   border-radius: 5px;
   font-size: 24px;
@@ -85,3 +85,24 @@ a:hover {
   margin-top: 40px;
 }
 
+.btn-check {
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
+  padding: 3px 21px;
+  border-radius: 5px;
+  // font-size: 24px;
+  text-decoration: none;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  // width: 150px;
+  // height: 40px;
+  vertical-align: center;
+  // margin-top: 40px;
+}
+
+.btn-check:hover {
+  text-decoration: none;
+  color: white;
+}
