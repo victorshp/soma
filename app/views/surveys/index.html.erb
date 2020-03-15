@@ -1,7 +1,8 @@
 <div class="container w-50">
   <div class="row">
-    <div class="col ">
+    <div class="col">
       <h1 class='m-3 form text-center'>Surveys</h1>
+      
       <div class="cards">
       <% @surveys.each do |survey| %>
         <%= link_to new_survey_survey_answer_path(survey) do  %>
@@ -10,7 +11,7 @@
           </div>
         <% end %>
       <% end %>
+      </div>
     </div>
   </div>
 </div>
-<div class="mt-5"></div>

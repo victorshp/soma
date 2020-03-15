@@ -16,24 +16,22 @@
   </head>
   <body>
     <%= render 'shared/flashes' %>
-    <div id="page-container">
-      <div id="content-wrap">
-        <%= render 'shared/navbar' %>
-        <%= yield %>
-      </div>
-      
-      <% if current_user %>
-        <footer class="footer">
-          <div class="footer-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </footer>
-      <% end %>
+    <div id="page-container content-wrap">
+      <%= render 'shared/navbar' %>
+      <%= yield %>
     </div>
+
+    <% if current_user %>
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </footer>
+    <% end %>
 
     <%= javascript_include_tag 'application' %>
 
