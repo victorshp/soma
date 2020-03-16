@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :survey_answers
 
   # enum role: [:surveyor, :surveyee, :both]
+
+  has_many :orders
+
 end
