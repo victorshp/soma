@@ -1,24 +1,51 @@
-.btn-home {
+.btn-lg-green {
+  color: #584B53;
+  background: #71DB77;
+  user-select:none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  border-radius: 0.25rem;
+  vertical-align: center;
+
+/*.btn-home {
   border: 0px solid #1DDD88;
   background: #1DDD88;
   border-radius: 5px;
   font-size: 24px;
   vertical-align: middle;
   letter-spacing: 2px;
-  color: white;
+  color: white; */
+
   text-align: center;
-  width: 200px;
-  height: 45px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  width: 16rem;
+  font-size: 24px;
+  margin-top: 20vh;
+}
+
+.btn-green {
+  color: #584B53;
+  background: #71DB77;
+  user-select:none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  border-radius: 0.25rem;
   vertical-align: center;
   text-align: center;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  width: 6rem;
+  font-size: 16px;
 }
 
 /* mouse over link */
-a:hover {
+.btn-lg-green:hover, .btn-green:hover{
   text-decoration: none;
+  background: #218838;
+  color: #EBEBEB;
 }
 
 .btn-login {
+  user-select:none;
   border: 0px solid #1DDD88;
   background: #1DDD88;
   padding: 3px 21px;
@@ -36,6 +63,7 @@ a:hover {
 }
 
 .btn-sign-up {
+  user-select:none;
   border: 0px solid #1DDD88;
   background: #1DDD88;
   padding: 3px 21px;
@@ -53,6 +81,7 @@ a:hover {
 }
 
 .btn-forgot-pass {
+  user-select:none;
   border: 0px solid #1DDD88;
   background: #1DDD88;
   padding: 3px 21px;
@@ -69,6 +98,7 @@ a:hover {
 }
 
 .btn-submit {
+  user-select:none;
   border: 0px solid #1DDD88;
   background: #1DDD88;
   padding: 3px 21px;

@@ -7,7 +7,7 @@
   width:100%;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  position: absolute;
+  // position: absolute;
   bottom: 0;
 }
 .footer-links {
@@ -28,6 +28,7 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
 #page-container {
   background-color: #F4F4F4;
   position:relative;
@@ -35,6 +36,3 @@
   padding-bottom: 2rem;
 }
 
-#content-wrap {
-  padding-bottom: 2.5rem;
-}
