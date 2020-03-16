@@ -2,8 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <!-- Colocar o caminho da Foto que deve aparecer ao compartilar o link do SOMA -->
+    <!-- <meta property="og:image" content=""> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Soma</title>
+    <!-- Se tivermos content_for (:title) na página renderizada, o título da página
+    será este content_for. Se não será SOMA. -->
+    <title><%= content_for?(:title) ? (yield :title) : "SOMA Pesquisas de Mercado | Informações direto do seu Público Alvo" %></title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">

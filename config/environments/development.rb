@@ -11,6 +11,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports.
+  # Linha 15: Precisa ser true para podermos ver os Erros em Desenvolvimento.
   config.consider_all_requests_local = true
 
   # Enable/disable caching. By default caching is disabled.
