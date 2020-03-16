@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta property="og:image" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SOMA</title>
+    <!-- Se tivermos content_for (:title) na página renderizada, o título da página
+    será este content_for. Se não será SOMA. -->
+    <title><%= content_for?(:title) ? (yield :title) : "SOMA Pesquisas de Mercado | Informações direto do seu Público Alvo" %></title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
