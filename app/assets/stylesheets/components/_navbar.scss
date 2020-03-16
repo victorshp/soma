@@ -18,7 +18,10 @@
 .dropdown {
   color: #716969;
   font-size: 25px;
-
 }
 
 .dropdown-toggle:after { content: none }
+
+.dropdown {
+  height: 1px;
+}

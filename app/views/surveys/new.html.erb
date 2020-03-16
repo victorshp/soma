@@ -1,12 +1,12 @@
 <div class="container w-75">
   <div class="row justify-content-center">
     <div class="col">
-      <h1 class='m-3 form', style="color:#424874;">New Survey</h1>
+      <h1 class='m-3 form', style="color:#212121;">New Survey</h1>
       <div class='m-3 form'>
         <div class="bd-callout bd-callout-warning">
           <%= simple_form_for [@survey] do |f| %>
 
-            <%= f.input :title, label: "Title"%>
+            <%= f.input :title, label: "Title", placeholder: "The Hitchhiker's Guide to the Galaxy survey" %>
               <div id="questions">
                 <%= f.simple_fields_for :questions do |question| %>
 
