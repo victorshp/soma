@@ -6,6 +6,16 @@
   padding: .375rem .75rem;
   border-radius: 0.25rem;
   vertical-align: center;
+
+/*.btn-home {
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
+  border-radius: 5px;
+  font-size: 24px;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  color: white; */
+
   text-align: center;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   width: 16rem;
@@ -36,8 +46,8 @@
 
 .btn-login {
   user-select:none;
-  border: 0px solid #004B84;
-  background: #424874;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   padding: 3px 21px;
   border-radius: 5px;
   font-size: 24px;
@@ -54,8 +64,8 @@
 
 .btn-sign-up {
   user-select:none;
-  border: 0px solid #004B84;
-  background: #424874;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   padding: 3px 21px;
   border-radius: 5px;
   font-size: 24px;
@@ -72,8 +82,8 @@
 
 .btn-forgot-pass {
   user-select:none;
-  border: 0px solid #004B84;
-  background: #424874;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   padding: 3px 21px;
   border-radius: 5px;
   font-size: 24px;
@@ -89,8 +99,8 @@
 
 .btn-submit {
   user-select:none;
-  border: 0px solid #004B84;
-  background: #424874;
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
   padding: 3px 21px;
   border-radius: 5px;
   font-size: 24px;
@@ -105,3 +115,24 @@
   margin-top: 40px;
 }
 
+.btn-check {
+  border: 0px solid #1DDD88;
+  background: #1DDD88;
+  padding: 3px 21px;
+  border-radius: 5px;
+  // font-size: 24px;
+  text-decoration: none;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  // width: 150px;
+  // height: 40px;
+  vertical-align: center;
+  // margin-top: 40px;
+}
+
+.btn-check:hover {
+  text-decoration: none;
+  color: white;
+}
