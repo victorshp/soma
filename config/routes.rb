@@ -11,5 +11,8 @@ Rails.application.routes.draw do
     resources :answers, only: [:new, :create]
   end
 
+  resources :orders, only: [:show, :create]
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
+
   get 'profile', to: 'profiles#show'
 end
