@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :surveys
   has_many :survey_answers
+
+  # enum role: [:surveyor, :surveyee, :both]
 end
