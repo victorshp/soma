@@ -1,0 +1,10 @@
+<div class="">
+  <%= simple_form_for [question, answer] do |f| %>
+
+  <p><%= simple_format(question.content) %></p>
+
+  <%= f.input :content, as: :radio_buttons,
+    collection: ['a', 'b', 'c', 'd']%>
+  <%= f.submit 'Submit Answers  ', class: 'btn-submit' %>
+  <% end %>
+</div>
