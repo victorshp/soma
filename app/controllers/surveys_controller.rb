@@ -13,17 +13,34 @@ class SurveysController < ApplicationController
   def create
     @survey = Survey.new(survey_params)
     @survey.user = current_user
+    @survey.price = 10 + survey_params[:questions_attributes].to_h.size * 0.5
 
     if @survey.save
+      order  = Order.create!(survey: @survey, amount: @survey.price_cents, state: 'pending', user: current_user)
+
+        session = Stripe::Checkout::Session.create(
+          payment_method_types: ['card'],
+          line_items: [{
+            name: @survey.title,
+            amount: @survey.price_cents,
+            currency: 'brl',
+            quantity: 1
+          }],
+          success_url: survey_url(@survey),
+          cancel_url: survey_url(@survey)
+        )
+
+        order.update(checkout_session_id: session.id)
 
       redirect_to @survey
     else
       render :new
     end
+
   end
 
   def show
-    @answer = Answer.new()
+    @order = @survey.orders.last
   end
 
   def edit
