@@ -15,5 +15,4 @@ Rails.application.routes.draw do
   mount StripeEvent::Engine, at: '/stripe-webhooks'
 
   get 'profile', to: 'profiles#show'
-  get 'dashboard', to: 'dashboards#show'
 end
