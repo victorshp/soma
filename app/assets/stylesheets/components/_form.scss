@@ -16,8 +16,38 @@
   }
 }
 
-// .hoversz onclick{
-//   border-color: green;
-//   background-color: black;
-//   border-radius: 100;
-// }
+body{
+  font-family: Open Sans;
+}
+
+.sign-in {
+  background: #C2C1C2;
+  padding: 10vh 0px 15vh 0px;
+  border-radius: 2rem;
+}
+
+.sign-up {
+  background: #C2C1C2;
+  padding: 10vh 10vw 15vh 10vw;
+  border-radius: 2rem;
+}
+
+.logo-sign {
+  width: 18vw;
+  margin-bottom: 5vh;
+}
+
+.margin-bg{
+  margin-top: 10vh;
+}
+
+.side_bar {
+  color: white;
+  background: black;
+  height: 100vh;
+  position: fixed;
+}
+
+.side_bar h4 {
+  font-family: Open Sans;
+}
