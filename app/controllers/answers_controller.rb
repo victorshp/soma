@@ -15,7 +15,10 @@ before_action :get_question, only: [:create]
       end
     end
 
-    redirect_to profile_path, notice: 'Thanks for answering! You will receive R$ 0,30, your rewards will be placed in a few minutes'
+    survey_answer.reward = survey_answer.answers.count * 0.1
+    survey_answer.save
+
+    redirect_to profile_path, notice: "Thanks for answering! You will receive R$ #{survey_answer.reward}, your rewards will be placed in a few minutes"
   end
 
   private

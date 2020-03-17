@@ -22,6 +22,7 @@
                            placeholder: "Full Name or Company Name",
                            label: false,
                            input_html: { autocomplete: "email", style: 'width: 40vw;' } %>
+              <%#= f.input :role, collection: ['interviewer', 'interviewee'] %>
                <%= f.input :email,
                            required: true,
                            autofocus: true,
