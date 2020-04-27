@@ -1,7 +1,7 @@
 <div class="container" style="min-height:100vh;">
   <div class="row justify-content-center">
     <div class="col">
-      <h1 class='m-3 form border-bottom', style="color:#222222;">Survey Results</h1>
+      <h1 class='m-3 form border-bottom', style="color:#222222;">My Survey Results</h1>
       <% @questions.each do |question| %>
         <%= simple_format(question.content)  %>
         <% grouped_answers = question.answers.group_by(&:content) %>
