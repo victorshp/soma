@@ -12,6 +12,8 @@ gem "cocoon"
 gem "stripe"
 gem 'stripe_event'
 gem 'money-rails'
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
