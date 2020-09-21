@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Soma
+
+A marketplace for your questionnaires. Make money answering questionnaires and let your favorite brands know why you like their products!
+
+## General information
